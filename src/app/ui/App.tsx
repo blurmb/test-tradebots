@@ -2,6 +2,7 @@ import "./global.scss";
 
 import classes from "./App.module.scss";
 import { BrowserRouter } from "react-router";
+import { AppRoutes } from "@src/entities/Router";
 
 export const App = () => {
   return (
@@ -9,7 +10,7 @@ export const App = () => {
       <div className={classes.app}>
         <div className={classes.header} />
         <div className={classes.pageWrapper}>
-          <div>PAGE</div>
+          <AppRoutes />
         </div>
         <div className={classes.footer} />
       </div>
