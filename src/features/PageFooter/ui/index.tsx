@@ -7,6 +7,8 @@ import {
 } from "@src/entities/Router/model/paths";
 import { AppLink, RouteIcon } from "@src/entities/Router";
 import { useLocation } from "react-router";
+import { useAppSelector } from "@src/store/hooks";
+import { getNotificationsForSection } from "@src/entities/Notification";
 
 type PageFooterProps = {
   className?: string;
@@ -37,7 +39,10 @@ type IconProps = {
   path: RoutePath;
 };
 const IconWithBadge = ({ path }: IconProps) => {
-  const notificationsCount = 3;
+  const notifications = useAppSelector((state) =>
+    getNotificationsForSection(state, path),
+  );
+  const notificationsCount = notifications.length;
   return (
     <div className={classes.icon}>
       <RouteIcon size={22} path={path} />
