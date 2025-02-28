@@ -1,0 +1,22 @@
+$header-height: 50px;
+$footer-height: 50px;
+$page-height: calc(100vh - $header-height - $footer-height);
+
+.app {
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+
+  .header {
+    height: $header-height;
+  }
+
+  .page-wrapper {
+    min-height: $page-height;
+  }
+
+  .footer {
+    height: $footer-height;
+  }
+}
