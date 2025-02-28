@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-primary);
+  padding: var(--spacing-md);
+
+
+  .link {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+
+    .icon {
+      width: 24px;
+      height: 24px;
+
+      position: relative;
+
+      .badge {
+        background-color: var(--color-highlight);
+        border-radius: 50%;
+        font-size: var(--font-size-small);
+        color: var(--color-text-primary);
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -25%;
+        right: -25%;
+      }
+
+    }
+
+    .title {
+      font-size: var(--font-size-small);
+    }
+
+    &.selected {
+      color: var(--text-color-primary);
+    }
+
+  }
+
+}
