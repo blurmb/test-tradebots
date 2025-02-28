@@ -3,6 +3,7 @@ import "./global.scss";
 import classes from "./App.module.scss";
 import { BrowserRouter } from "react-router";
 import { AppRoutes } from "@src/entities/Router";
+import { PageFooter } from "@src/features/PageFooter";
 
 export const App = () => {
   return (
@@ -12,7 +13,7 @@ export const App = () => {
         <div className={classes.pageWrapper}>
           <AppRoutes />
         </div>
-        <div className={classes.footer} />
+        <PageFooter className={classes.footer} />
       </div>
     </BrowserRouter>
   );
