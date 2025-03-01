@@ -4,7 +4,7 @@ import classes from "./App.module.scss";
 import { BrowserRouter } from "react-router";
 import { AppRoutes } from "@src/entities/Router";
 import { PageFooter } from "@src/features/PageFooter";
-import { PageHeader } from "@src/features/PageHeader";
+import { PageHeader } from "@src/widgets/PageHeader";
 import { PortalProvider } from "../providers/PortalProvider";
 
 export const App = () => {
