@@ -6,6 +6,9 @@ $page-height: calc(100vh - $header-height - $footer-height);
   min-height: 100vh;
   max-height: 100vh;
   background-color: var(--color-background);
+  background-image: radial-gradient(circle at center -20px,
+      color-mix(in srgb, var(--color-secondary), transparent 80%),
+      var(--color-background) 20%);
   color: var(--color-text-primary);
 
   .header {
