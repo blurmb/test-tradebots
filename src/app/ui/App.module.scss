@@ -1,10 +1,10 @@
 $header-height: 50px;
 $footer-height: 50px;
-$page-height: calc(100vh - $header-height - $footer-height);
+$page-height: calc(100dvh - $header-height - $footer-height);
 
 .app {
-  min-height: 100vh;
-  max-height: 100vh;
+  min-height: 100dvh;
+  max-height: 100dvh;
   background-color: var(--color-background);
   background-image: radial-gradient(circle at center -20px,
       color-mix(in srgb, var(--color-secondary), transparent 80%),
