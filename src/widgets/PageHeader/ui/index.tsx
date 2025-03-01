@@ -6,6 +6,8 @@ import { Icon } from "@src/shared/ui/Icon";
 
 import menuIcon from "./icons/menu_icon.png";
 import refreshIcon from "./icons/refresh_icon.png";
+import { SideMenu } from "@src/features/SideMenu";
+import { useState } from "react";
 
 type PageHeaderProps = {
   className?: string;
@@ -14,9 +16,16 @@ type PageHeaderProps = {
 export const PageHeader = ({ className, onRefresh }: PageHeaderProps) => {
   const { pathname } = useLocation();
   const header = RoutePathToTitle[pathname as RoutePath];
-  const handleMenuClick = () => {}; //TODO
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
+  const onSideMenuClose = () => {
+    setIsSideMenuOpen(false);
+  };
+  const handleMenuClick = () => {
+    setIsSideMenuOpen(true);
+  };
   return (
     <div className={classNames(classes.wrapper, className)}>
+      <SideMenu isOpen={isSideMenuOpen} onClose={onSideMenuClose} />
       <button onClick={handleMenuClick}>
         <Icon type="img" src={menuIcon} />
       </button>
