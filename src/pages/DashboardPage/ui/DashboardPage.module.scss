@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+
+  &>*:not(.chart) {
+    padding: 0 var(--spacing-md);
+  }
+
+  .balance {
+    height: 60px;
+  }
+
+  .chart {
+    height: 200px;
+  }
+
+  .bots {
+    height: 225px;
+  }
+
+  .settings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-sm);
+
+    .lable {
+      flex-shrink: 0;
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-small);
+    }
+
+    .chips {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: var(--spacing-base);
+
+      &>* {
+        min-width: 60px;
+        flex-shrink: 0;
+        font-size: var(--font-size-small);
+      }
+    }
+  }
+}
