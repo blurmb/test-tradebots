@@ -18,6 +18,7 @@ $page-height: calc(100vh - $header-height - $footer-height);
   .page-wrapper {
     min-height: $page-height;
     max-height: $page-height;
+    height: $page-height;
     overflow-y: auto;
   }
 
