@@ -4,8 +4,8 @@ import { RoutePath, RoutePathToTitle } from "@src/entities/Router";
 import { useLocation } from "react-router";
 import { Icon } from "@src/shared/ui/Icon";
 
-import menuIcon from "./icons/menu_icon.png";
-import refreshIcon from "./icons/refresh_icon.png";
+import menuIcon from "@src/shared/assets/icons/menu_icon.png";
+import refreshIcon from "@src/shared/assets/icons/refresh_icon.png";
 import { SideMenu } from "@src/features/SideMenu";
 import { useState } from "react";
 
