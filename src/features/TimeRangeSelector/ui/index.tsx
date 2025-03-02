@@ -10,7 +10,7 @@ const TimeRangeToLabel: { [key in TimeRange]: string } = {
   "24h": "24h",
   "7d": "7 days",
   "30d": "30 days",
-  all: "All time",
+  all_time: "All time",
 };
 
 type TimeRangeSelectorProps = {
