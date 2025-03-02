@@ -3,6 +3,10 @@ import {
   notificationsSlice,
   NotificationsState,
 } from "@src/entities/Notification";
+import {
+  botSelectionSlice,
+  BotSelectionState,
+} from "@src/features/botSelection";
 import { TimeRange, timeRangeSlice } from "@src/features/TimeRangeSelector";
 import {
   tradingCapitalSlice,
@@ -20,6 +24,7 @@ export interface StateSchema {
   timeRange: TimeRange;
   tradingCapital: TradingCapitalState;
   botList: BotListState;
+  botSelection: BotSelectionState;
 }
 export const store = configureStore<StateSchema>({
   reducer: {
@@ -27,5 +32,6 @@ export const store = configureStore<StateSchema>({
     timeRange: timeRangeSlice.reducer,
     tradingCapital: tradingCapitalSlice.reducer,
     botList: botListSlice.reducer,
+    botSelection: botSelectionSlice.reducer,
   },
 });
