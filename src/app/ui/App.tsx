@@ -10,7 +10,7 @@ import { PortalProvider } from "../providers/PortalProvider";
 export const App = () => {
   return (
     <PortalProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={PUBLIC_URL || ""}>
         <div className={classes.app}>
           <PageHeader className={classes.header} />
           <div className={classes.pageWrapper}>
