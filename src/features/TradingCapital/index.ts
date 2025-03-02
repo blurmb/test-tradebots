@@ -5,3 +5,4 @@ export {
   getTradingCapitalError,
   getTradingCapitalIsLoading,
 } from "./model/selectors";
+export { fetchTradingCapital } from "./model/thunk/fetchTradingCapital";
