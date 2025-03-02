@@ -1,0 +1,43 @@
+.wrapper {
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-body);
+    letter-spacing: -0.5px;
+
+    .name {
+      color: var(--color-text-primary);
+      text-transform: uppercase;
+    }
+
+    .profit {
+
+      &::after {
+        content: "%";
+      }
+
+      &.positive {
+        &::before {
+          content: "+";
+        }
+
+        color: var(--color-positive);
+      }
+
+      &.negative {
+        &::before {
+          content: "-";
+        }
+
+        color: var(--color-negative);
+      }
+    }
+  }
+}
