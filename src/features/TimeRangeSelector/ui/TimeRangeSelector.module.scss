@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-base);
+
+  .lable {
+    flex-shrink: 0;
+    flex-grow: 0;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-small);
+  }
+
+  .chips {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: var(--spacing-base);
+
+    &>* {
+      min-width: 50px;
+      flex-shrink: 0;
+      font-size: var(--font-size-small);
+    }
+  }
+}
