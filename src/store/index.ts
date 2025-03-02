@@ -13,6 +13,10 @@ import {
   TradingCapitalState,
 } from "@src/features/TradingCapital/model/slice";
 import { botListSlice, BotListState } from "@src/widgets/BotList/";
+import {
+  botProfitChartSlice,
+  BotProfitChartState,
+} from "@src/widgets/BotProfitChart";
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
@@ -25,6 +29,7 @@ export interface StateSchema {
   tradingCapital: TradingCapitalState;
   botList: BotListState;
   botSelection: BotSelectionState;
+  botProfitChart: BotProfitChartState;
 }
 export const store = configureStore<StateSchema>({
   reducer: {
@@ -33,5 +38,6 @@ export const store = configureStore<StateSchema>({
     tradingCapital: tradingCapitalSlice.reducer,
     botList: botListSlice.reducer,
     botSelection: botSelectionSlice.reducer,
+    botProfitChart: botProfitChartSlice.reducer,
   },
 });
