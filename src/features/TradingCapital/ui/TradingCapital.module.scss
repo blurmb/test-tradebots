@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+
+  text-transform: uppercase;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+
+
+  .amount {
+    text-decoration: line-through;
+  }
+
+  &.loaded {
+    .amount {
+      text-decoration: unset;
+    }
+  }
+
+  &.error {
+    color: red;
+  }
+
+  .text {
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .capital {
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing-sm);
+
+      font-weight: var(--font-weight-regular);
+      font-size: var(--font-size-title);
+    }
+
+    .balance {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-sm);
+      justify-content: space-between;
+
+      .coins {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        justify-content: space-between;
+
+        .coinsAmount {
+          display: flex;
+          flex-direction: row;
+          gap: var(--spacing-sm);
+        }
+      }
+    }
+  }
+}
