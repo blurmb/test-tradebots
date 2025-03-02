@@ -36,9 +36,6 @@ export const TradingCapital = ({ className }: TradingCapitalProps) => {
 
     return () => abortController.abort();
   }, []);
-  useEffect(() => {
-    console.log(data?.capital.toString().length);
-  }, [data]);
   const tradingCapital = data
     ? {
         capital: numFormat(data.capital).concat(
