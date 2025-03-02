@@ -3,7 +3,7 @@ import {
   notificationsSlice,
   NotificationsState,
 } from "@src/entities/Notification";
-import { timeRangeSlice } from "@src/features/TimeRangeSelector";
+import { TimeRange, timeRangeSlice } from "@src/features/TimeRangeSelector";
 import {
   tradingCapitalSlice,
   TradingCapitalState,
@@ -17,7 +17,7 @@ export type StateSchemaKey = keyof StateSchema;
 
 export interface StateSchema {
   notifications: NotificationsState;
-  timeRange: string;
+  timeRange: TimeRange;
   tradingCapital: TradingCapitalState;
   botList: BotListState;
 }
