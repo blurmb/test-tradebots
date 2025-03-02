@@ -21,6 +21,7 @@ const nameToIcon: Record<string, string> = {
 type BotCardProps = {
   name: string;
   profit?: number;
+  onSelect?: () => void;
   selected?: boolean;
   className?: string;
 };
@@ -28,14 +29,16 @@ export const BotCard = ({
   name,
   profit,
   className,
+  onSelect,
   selected = false,
 }: BotCardProps) => (
-  <div
+  <button
     className={classNames(
       classes.wrapper,
       { [classes.selected]: selected },
       className,
     )}
+    onClick={onSelect}
   >
     <div className={classes.content}>
       <Icon
@@ -57,5 +60,5 @@ export const BotCard = ({
         </div>
       )}
     </div>
-  </div>
+  </button>
 );
