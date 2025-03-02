@@ -20,7 +20,7 @@ const nameToIcon: Record<string, string> = {
 
 type BotCardProps = {
   name: string;
-  profit: number;
+  profit?: number;
   selected?: boolean;
   className?: string;
 };
@@ -45,15 +45,17 @@ export const BotCard = ({
         alt={`${name} icon`}
       />
       <div className={classes.name}>{name}</div>
-      <div
-        className={classNames(
-          classes.profit,
-          { [classes.positive]: profit > 0 },
-          { [classes.negative]: profit < 0 },
-        )}
-      >
-        {Math.abs(profit)}
-      </div>
+      {profit && (
+        <div
+          className={classNames(
+            classes.profit,
+            { [classes.positive]: profit > 0 },
+            { [classes.negative]: profit < 0 },
+          )}
+        >
+          {Math.abs(profit)}
+        </div>
+      )}
     </div>
   </div>
 );
