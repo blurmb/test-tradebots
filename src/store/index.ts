@@ -8,6 +8,7 @@ import {
   tradingCapitalSlice,
   TradingCapitalState,
 } from "@src/features/TradingCapital/model/slice";
+import { botListSlice, BotListState } from "@src/widgets/BotList/";
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
@@ -18,11 +19,13 @@ export interface StateSchema {
   notifications: NotificationsState;
   timeRange: string;
   tradingCapital: TradingCapitalState;
+  botList: BotListState;
 }
 export const store = configureStore<StateSchema>({
   reducer: {
     notifications: notificationsSlice.reducer,
     timeRange: timeRangeSlice.reducer,
     tradingCapital: tradingCapitalSlice.reducer,
+    botList: botListSlice.reducer,
   },
 });
