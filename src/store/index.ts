@@ -4,6 +4,10 @@ import {
   NotificationsState,
 } from "@src/entities/Notification";
 import { timeRangeSlice } from "@src/features/TimeRangeSelector";
+import {
+  tradingCapitalSlice,
+  TradingCapitalState,
+} from "@src/features/TradingCapital/model/slice";
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
@@ -13,10 +17,12 @@ export type StateSchemaKey = keyof StateSchema;
 export interface StateSchema {
   notifications: NotificationsState;
   timeRange: string;
+  tradingCapital: TradingCapitalState;
 }
 export const store = configureStore<StateSchema>({
   reducer: {
     notifications: notificationsSlice.reducer,
     timeRange: timeRangeSlice.reducer,
+    tradingCapital: tradingCapitalSlice.reducer,
   },
 });
