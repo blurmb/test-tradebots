@@ -1,0 +1,36 @@
+  .wrapper {
+    $gap: 1px;
+    $card-height: 110px;
+    $container-height: $card-height * 2 + $gap * 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, $card-height);
+
+    // * вроде должен grid работать на старых браузерах, *
+    // * но если не работает, то можно вот так           *
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // width: 100%;
+    //
+    // .bot {
+    //   width: calc(100% / 3 - $gap * 2);
+    //   height: $card-height;
+    // }
+
+    gap: $gap;
+    justify-items: stretch;
+    align-items: stretch;
+    overflow-y: auto;
+    height: $container-height;
+    min-height: $container-height;
+
+    &>* {
+      height: $card-height;
+      min-height: $card-height;
+
+      &.error {
+        opacity: 0.5;
+      }
+    }
+  }
