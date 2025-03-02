@@ -9,7 +9,7 @@ import {
 import { fetchTradingCapital } from "../model/thunk/fetchTradingCapital";
 import { useEffect } from "react";
 import { Icon } from "@src/shared/ui";
-import coinIcon from "./icons/coin_icon.png";
+import coinIcon from "@src/shared/assets/icons/coin_icon.png";
 
 const numFormat = (num: number) => {
   const parts = num.toString().split(/[,\.]/);
