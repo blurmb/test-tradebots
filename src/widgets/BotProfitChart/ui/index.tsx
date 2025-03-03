@@ -13,9 +13,7 @@ import {
 import classes from "./BotProfitChart.module.scss";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
-import {
-  getBotProfitChartData,
-} from "../model/selectors";
+import { getBotProfitChartData } from "../model/selectors";
 import { fetchBotProfit } from "../model/thunk/fetchBotProfit";
 
 type BotProfitChartProps = {
@@ -62,12 +60,7 @@ export const BotProfitChart = ({ className }: BotProfitChartProps) => {
     }, [active, payload]);
   };
   return (
-    <div
-      className={classNames(
-        classes.wrapper,
-        className,
-      )}
-    >
+    <div className={classNames(classes.wrapper, className)}>
       <ResponsiveContainer
         width="100%"
         height="100%"
@@ -114,7 +107,7 @@ export const BotProfitChart = ({ className }: BotProfitChartProps) => {
         </AreaChart>
       </ResponsiveContainer>
       <div />
-      {currentProfit && (
+      {currentProfit !== undefined && (
         <div
           className={classNames(classes.tooltip, {
             [classes.positive]: currentProfit > 0,
