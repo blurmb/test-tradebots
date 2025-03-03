@@ -45,7 +45,7 @@ export const BotList = ({ className }: BotsListProps) => {
   );
   const isLoading = useAppSelector(getBotListIsLoading);
   const error = useAppSelector(getBotListError);
-  const isError = error !== "aborted";
+  const isError = error !== "aborted" && error !== undefined;
   const isValid = !isLoading && !error && !!bots;
   useEffect(() => {
     const abortController = new AbortController();
